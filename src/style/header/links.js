@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Nav = styled.nav`
+    height: 75px;
+`
+
 export const Links = styled.ul`
     list-style: none;
     display: flex;
