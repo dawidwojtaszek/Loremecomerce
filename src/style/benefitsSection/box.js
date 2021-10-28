@@ -16,8 +16,9 @@ export const BoxInfo = styled.div`
 `
 export const BoxTitle = styled.h3`
     font-size:1.5rem;
+    font-weight: 400;
 `
 export const BoxSubtitle = styled.p`
-    color: #707070;
+    color: ${({ theme }) => theme.colors.gray};
     font-size: 1.3rem;
 `

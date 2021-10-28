@@ -4,7 +4,7 @@ import { InfoBox, InfoTitle, InfoSubtitle } from "./leftSide";
 import { Image } from "./image";
 
 const Hero = styled.div`
-    background: #f4f3ef;
+    background: ${({ theme }) => theme.colors.light};
 `
 
 Hero.Container = Container;

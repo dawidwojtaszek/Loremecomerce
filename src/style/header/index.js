@@ -11,6 +11,7 @@ const Header = styled.header`
     -webkit-box-shadow: 0px 5px 31px -5px rgba(66, 68, 90, 0.1);
     -moz-box-shadow: 0px 5px 31px -5px rgba(66, 68, 90, 0.1);
     box-shadow: 0px 5px 31px -5px rgba(66, 68, 90, 0.1);  
+ 
 
 `
 Header.Container = Container;
