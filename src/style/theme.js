@@ -1,9 +1,11 @@
-export const theme={
+export const theme = {
     colors: {
         header: '#fff',
         font: '#000',
+        primary: '#DF7A62',
+        secondary: '#0B7189',
     },
-    size:{
+    size: {
         container: '1366px'
     }
 }
