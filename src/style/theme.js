@@ -6,6 +6,7 @@ export const theme = {
         secondary: '#0B7189',
         gray: '#707070',
         light: '#F4F3EF',
+        additiona: '#5BC8AF',
     },
     size: {
         container: '1366px'
