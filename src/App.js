@@ -5,6 +5,7 @@ import HeaderComponent from './components/header';
 import HeroSection from './components/heroSection';
 import BenefitsSection from './components/benefitsSection';
 import Bestsellers from './components/bestsellers';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <HeroSection />
       <BenefitsSection />
       <Bestsellers />
+      <Footer />
     </ThemeProvider>
   );
 }
