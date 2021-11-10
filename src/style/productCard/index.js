@@ -4,7 +4,8 @@ import { Name, Category, Price, PriceTag, Info, PriceBox } from './info'
 import { Image, ImageBox, Tag, WishlistBtn, QuickView } from "./image";
 
 const Card = styled.div`
-    margin-top: 2rem;
+    
+    margin: 2rem .5rem;
     min-width: 310px;
     display: flex;
     flex-direction: column;

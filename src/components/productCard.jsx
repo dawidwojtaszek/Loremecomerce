@@ -12,6 +12,7 @@ const ProductCard = () => {
             <Card>
                 <Card.ImageBox>
                     <Card.Image src="https://i.ibb.co/M6hHc3F/brown-trench.png" />
+
                     <Card.Tag bg="#5BC8AF">NEW</Card.Tag>
                     <Card.WishlistBtn>
                         <FontAwesomeIcon icon={faHeart} />

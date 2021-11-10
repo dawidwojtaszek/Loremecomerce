@@ -8,7 +8,7 @@ const Container = styled.div`
     margin:1rem auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 `
 BestsellersSection.Container = Container;
 
