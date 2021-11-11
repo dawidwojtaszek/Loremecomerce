@@ -4,8 +4,12 @@ import Header from "../style/header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle, faStar } from "@fortawesome/free-regular-svg-icons";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { useSelector } from "react-redux";
 
 const HeaderComponent = () => {
+
+    const wishlistCounter = useSelector(state => state.wishlist.items).length;
+
     return (
         <Header>
             <Header.Container>
@@ -30,7 +34,7 @@ const HeaderComponent = () => {
                             <FontAwesomeIcon icon={faStar} />
                         </Header.ElementIcon>
                         Wishlist
-                        <Header.Counter>0</Header.Counter>
+                        <Header.Counter>{wishlistCounter}</Header.Counter>
                     </Header.RightElement>
                     <Header.RightElement>
                         <Header.ElementIcon >

@@ -37,13 +37,10 @@ export const WishlistBtn = styled.button`
     border: none;
     cursor: pointer;
     background: none;
-    color:#000;
-    transition: color 0.200s;
+    color:${({ color }) => color};
+    opacity: ${({ opacity }) => opacity};
+    transition: opacity 0.200s;
 
-    &:hover{
-        color:#CF2626;
-        
-    }
 
 `
 export const QuickView = styled.button`
