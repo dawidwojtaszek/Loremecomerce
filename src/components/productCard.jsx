@@ -4,11 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus, faTag, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { addItemToWishlist } from "../redux/wishlist";
+import { toggleModal, setCurrentElement } from "../redux/modal";
 import { useDispatch, useSelector } from "react-redux";
 import '../style/elements/tooltip.css';
 
-const ProductCard = ({ name, category, price, imgUrl, tag, id }) => {
+const ProductCard = (props) => {
 
+    const currentProduct = props;
+    const { name, category, price, imgUrl, tag, id } = props
     const dispatch = useDispatch();
     const wishList = useSelector(state => state.wishlist.items);
     const existingItem = wishList.filter(item => { return item === id })
@@ -35,7 +38,7 @@ const ProductCard = ({ name, category, price, imgUrl, tag, id }) => {
                             )
 
                     }
-                    <Card.QuickView>
+                    <Card.QuickView onClick={() => { dispatch(toggleModal()); dispatch(setCurrentElement(currentProduct)) }}>
                         <FontAwesomeIcon icon={faEye} />
                     </Card.QuickView>
                 </Card.ImageBox>
