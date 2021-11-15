@@ -33,7 +33,12 @@ const Modal = () => {
 
                     <ModalWrap.Product>
 
-                        <ModalWrap.ProductTitle>{product.name}</ModalWrap.ProductTitle>
+                        <ModalWrap.ProductTitle>
+                            {product.name}
+                        </ModalWrap.ProductTitle>
+                        <ModalWrap.ProductCategory>
+                            {product.category}
+                        </ModalWrap.ProductCategory>
                         <ModalWrap.ProductDescription>
                             {product.description}
                         </ModalWrap.ProductDescription>

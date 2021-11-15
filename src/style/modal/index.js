@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { CloseContainer, CloseBtn, Product, ProductTitle, ProductDescription, ProductPrice, ProductBtn } from "./info";
+import { CloseContainer, CloseBtn, Product, ProductTitle, ProductDescription, ProductPrice, ProductBtn, ProductCategory } from "./info";
 
 const ModalWrap = styled.div`
     position: fixed;
@@ -66,6 +66,7 @@ ModalWrap.CloseContainer = CloseContainer;
 ModalWrap.CloseBtn = CloseBtn;
 ModalWrap.Product = Product;
 ModalWrap.ProductTitle = ProductTitle;
+ModalWrap.ProductCategory = ProductCategory;
 ModalWrap.ProductDescription = ProductDescription;
 ModalWrap.ProductPrice = ProductPrice;
 ModalWrap.ProductBtn = ProductBtn;

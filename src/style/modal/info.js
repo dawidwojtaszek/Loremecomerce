@@ -40,6 +40,14 @@ export const ProductTitle = styled.h4`
     font-size: 2.3rem;
     font-weight: 900;
 `
+export const ProductCategory = styled.span`
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: ${({ theme }) => theme.colors.gray};
+    
+`
+
 export const ProductDescription = styled.p`
     margin-top: 2rem;
     font-size: 1.2rem;
