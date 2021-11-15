@@ -9,6 +9,9 @@ export const RightSection = styled.div`
         color:#000;
         text-decoration: none;
     }
+    @media(max-width:920px){
+        display: none;
+    }
 `
 
 export const RightElement = styled.div`
@@ -39,4 +42,18 @@ export const Counter = styled.div`
 export const ElementIcon = styled.div`
     padding:0.5rem;
     font-size:1.5rem;
+        @media(max-width:1000px){
+        font-size: 1rem;
+    }
+`
+export const Hamburger = styled.button`
+    display: none;
+    border:none;
+    background:none;
+    padding:2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    @media(max-width:920px){
+        display: block;
+    }
 `

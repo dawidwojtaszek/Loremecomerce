@@ -3,12 +3,14 @@ import Logo from '../assets/images/loremLogo.png';
 import Header from "../style/header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle, faStar } from "@fortawesome/free-regular-svg-icons";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { useSelector } from "react-redux";
-import { Link } from 'react-router-dom'
-import Cart from "./cart";
-const HeaderComponent = () => {
+import { faShoppingCart, faBars } from "@fortawesome/free-solid-svg-icons";
+import { useSelector, useDispatch } from "react-redux";
+import { Link } from 'react-router-dom';
+import { toggleMenu } from "../redux/mobileMenu";
 
+// import Cart from "./cart";
+const HeaderComponent = () => {
+    const dispatch = useDispatch();
     const wishlistCounter = useSelector(state => state.wishlist.items).length;
 
     return (
@@ -45,10 +47,12 @@ const HeaderComponent = () => {
                         </Header.ElementIcon>
                         Cart
                         <Header.Counter>0</Header.Counter>
-                        <Cart />
+                        {/* <Cart /> */}
                     </Header.RightElement>
                 </Header.RightSection>
-
+                <Header.Hamburger onClick={() => dispatch(toggleMenu())}>
+                    <FontAwesomeIcon icon={faBars} />
+                </Header.Hamburger>
             </Header.Container>
         </Header>
     )
