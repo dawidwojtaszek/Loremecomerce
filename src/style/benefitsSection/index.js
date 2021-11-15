@@ -3,6 +3,9 @@ import { Box, BoxIcon, BoxInfo, BoxTitle, BoxSubtitle } from './box'
 
 const Benefits = styled.div`
     margin-top: 4rem;
+      @media(max-width:920px){
+        margin-top:1rem;
+    }
 `
 
 Benefits.Container = styled.div`
@@ -12,6 +15,9 @@ Benefits.Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0;
+    @media(max-width:920px){
+        flex-direction: column;
+    }
 `
 Benefits.Box = Box;
 Benefits.BoxIcon = BoxIcon;

@@ -12,6 +12,10 @@ const Container = styled.div`
     display: flex;
     justify-content:space-between;
     padding: 1rem;
+       @media(max-width:920px){
+        flex-direction: column-reverse;
+        align-items: center;
+    }
     
 `
 
@@ -26,4 +30,5 @@ FooterSection.Copyright = Copyright;
 FooterSection.Description = Description;
 FooterSection.Input = Input;
 FooterSection.SubscribeBtn = SubscribeBtn;
+
 export default FooterSection;

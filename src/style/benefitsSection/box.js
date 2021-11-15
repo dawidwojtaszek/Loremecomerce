@@ -4,6 +4,9 @@ export const Box = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+       @media(max-width:920px){
+        padding:1rem;
+    }
 `
 export const BoxIcon = styled.div`
     color:${({ theme }) => theme.colors.secondary};
