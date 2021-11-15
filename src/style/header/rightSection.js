@@ -5,6 +5,10 @@ export const RightSection = styled.div`
     justify-content: space-between;
     height: 75px;
     align-items: flex-end;
+        & a{
+        color:#000;
+        text-decoration: none;
+    }
 `
 
 export const RightElement = styled.div`
@@ -14,6 +18,7 @@ export const RightElement = styled.div`
     align-items: center;
     border-right: ${({ border }) => border ? ('1px solid') : ('none')};
     padding: 0 1rem;
+
 `
 export const Counter = styled.div`
     color:#fff;

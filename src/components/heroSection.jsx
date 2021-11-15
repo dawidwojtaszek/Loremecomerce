@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../style/heroSection";
 import { Button } from "../style/elements/button";
 import heroImage from '../assets/images/herosection.jpg'
+import { Link } from 'react-router-dom'
 const HeroSection = () => {
 
     return (
@@ -12,7 +13,7 @@ const HeroSection = () => {
                     <Hero.Subtitle>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </Hero.Subtitle>
-                    <Button>Shop Now</Button>
+                    <Link to="/shop" ><Button>Shop Now</Button></Link>
                 </Hero.Box>
                 <Hero.Image src={heroImage} />
             </Hero.Container>

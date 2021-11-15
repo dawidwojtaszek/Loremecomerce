@@ -19,7 +19,6 @@ const Bestsellers = ({ bestsellerList }) => {
 
     const currentList = useSelector(state => state.items.currentBestseller);
 
-
     return (
 
         <BestsellersSection>

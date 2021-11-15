@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle, faStar } from "@fortawesome/free-regular-svg-icons";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
-
+import { Link } from 'react-router-dom'
 const HeaderComponent = () => {
 
     const wishlistCounter = useSelector(state => state.wishlist.items).length;
@@ -13,13 +13,13 @@ const HeaderComponent = () => {
     return (
         <Header>
             <Header.Container>
-                <Header.Logo src={Logo} />
+                <Link to="/"><Header.Logo src={Logo} /></Link>
                 <Header.Nav>
                     <Header.Links>
-                        <Header.LinkElement>Home</Header.LinkElement>
-                        <Header.LinkElement>Shop</Header.LinkElement>
-                        <Header.LinkElement>Blog</Header.LinkElement>
-                        <Header.LinkElement>Contact</Header.LinkElement>
+                        <Header.LinkElement><Link to="/">Home</Link></Header.LinkElement>
+                        <Header.LinkElement><Link to="/shop">Shop</Link></Header.LinkElement>
+                        <Header.LinkElement><Link to="/">Blog</Link></Header.LinkElement>
+                        <Header.LinkElement><Link to="/">Contact</Link></Header.LinkElement>
                     </Header.Links>
                 </Header.Nav>
                 <Header.RightSection>
@@ -29,13 +29,15 @@ const HeaderComponent = () => {
                         </Header.ElementIcon>
                         Sign in
                     </Header.RightElement>
-                    <Header.RightElement border>
-                        <Header.ElementIcon >
-                            <FontAwesomeIcon icon={faStar} />
-                        </Header.ElementIcon>
-                        Wishlist
-                        <Header.Counter>{wishlistCounter}</Header.Counter>
-                    </Header.RightElement>
+                    <Link to="/wishlist">
+                        <Header.RightElement border>
+                            <Header.ElementIcon >
+                                <FontAwesomeIcon icon={faStar} />
+                            </Header.ElementIcon>
+                            Wishlist
+                            <Header.Counter>{wishlistCounter}</Header.Counter>
+                        </Header.RightElement>
+                    </Link>
                     <Header.RightElement>
                         <Header.ElementIcon >
                             <FontAwesomeIcon icon={faShoppingCart} />

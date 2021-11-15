@@ -2,9 +2,9 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const addItem = (currentList, itemToAdd) => {
 
-    const existingItem = currentList.filter((item) => { return item === itemToAdd });
+    const existingItem = currentList.filter((item) => { return item.id === itemToAdd.id });
     if (existingItem.length > 0) {
-        const list = currentList.filter(item => item !== itemToAdd)
+        const list = currentList.filter(item => item.id !== itemToAdd.id)
         return list;
 
     }
@@ -14,6 +14,11 @@ const addItem = (currentList, itemToAdd) => {
         return list;
     }
 
+}
+
+const removeItemFromWishlist = (currentList, itemToRemoveId) => {
+    const newList = currentList.filter(item => { return item.id !== itemToRemoveId })
+    return newList
 }
 
 const initialState = {
@@ -27,10 +32,16 @@ export const wishlistSlice = createSlice({
         addItemToWishlist: (state, action) => {
             state.items = addItem(state.items, action.payload)
         },
+        clearAll: (state) => {
+            state.items = []
+        },
+        removeItem: (state, action) => {
+            state.items = removeItemFromWishlist(state.items, action.payload)
+        }
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { addItemToWishlist } = wishlistSlice.actions;
+export const { addItemToWishlist, clearAll, removeItem } = wishlistSlice.actions;
 
 export default wishlistSlice.reducer;

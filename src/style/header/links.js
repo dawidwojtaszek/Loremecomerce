@@ -15,4 +15,12 @@ export const LinkElement = styled.li`
     padding:0 1rem;
     font-size: 22px;
     font-weight: 300;
+   
+    & a {
+        color:#000;
+        text-decoration: none;
+    }
+    /* &:hover{
+        border-bottom: 1px solid #000;
+    } */
 `
