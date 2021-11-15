@@ -6,6 +6,7 @@ import { faUserCircle, faStar } from "@fortawesome/free-regular-svg-icons";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 import { Link } from 'react-router-dom'
+import Cart from "./cart";
 const HeaderComponent = () => {
 
     const wishlistCounter = useSelector(state => state.wishlist.items).length;
@@ -44,8 +45,10 @@ const HeaderComponent = () => {
                         </Header.ElementIcon>
                         Cart
                         <Header.Counter>0</Header.Counter>
+                        <Cart />
                     </Header.RightElement>
                 </Header.RightSection>
+
             </Header.Container>
         </Header>
     )

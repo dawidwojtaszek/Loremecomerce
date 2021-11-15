@@ -13,8 +13,9 @@ export const Links = styled.ul`
 `
 export const LinkElement = styled.li`
     padding:0 1rem;
-    font-size: 22px;
+    font-size: 1.3rem;
     font-weight: 300;
+
    
     & a {
         color:#000;
