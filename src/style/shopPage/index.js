@@ -1,0 +1,49 @@
+import styled from "styled-components";
+
+
+const Shop = styled.div`
+    max-width: ${({ theme }) => theme.size.container};
+    margin: auto;
+
+`
+const Container = styled.div`
+    display: flex;
+    width: 100%;
+    min-height: 600px;
+    margin-top: 2rem;
+    @media(max-width:920px){
+        flex-direction: column;
+    }
+`
+const Navigation = styled.div`
+    background-color: yellow;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+        @media(max-width:920px){
+        width: 100%;
+        height: 100px;
+    }
+`
+const NavigationTitle = styled.span`
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: 300;
+
+`
+const ProductList = styled.div`
+    background-color: green;
+    width: 75%;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+        @media(max-width:920px){
+        width: 100%;
+    }
+`
+Shop.Container = Container;
+Shop.Navigation = Navigation;
+Shop.NavigationTitle = NavigationTitle;
+Shop.ProductList = ProductList;
+
+export default Shop;

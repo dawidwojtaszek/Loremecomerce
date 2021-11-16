@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import MobileMenu from './components/mobileMenu';
 import HomePage from './pages/homepage';
 import WishlistPage from './pages/wishlist';
+import ShopPage from './pages/shop';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -32,6 +33,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/wishlist" element={<WishlistPage />} />
+        <Route path="/shop" element={<ShopPage />} />
       </Routes>
 
       <Footer />
