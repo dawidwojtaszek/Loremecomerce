@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faTag, faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleModal } from "../redux/modal";
+import { addItem } from "../redux/cart";
 import { useRef } from "react";
 
 const Modal = () => {
@@ -45,7 +46,7 @@ const Modal = () => {
                         <ModalWrap.ProductPrice>
                             <FontAwesomeIcon icon={faTag} /> ${product.price}
                         </ModalWrap.ProductPrice>
-                        <ModalWrap.ProductBtn>
+                        <ModalWrap.ProductBtn onClick={() => dispatch(addItem(product))}>
                             <FontAwesomeIcon icon={faCartPlus} /> Add To cart
                         </ModalWrap.ProductBtn>
                     </ModalWrap.Product>

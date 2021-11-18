@@ -39,7 +39,7 @@ const ProductsBox = styled.div`
     display: flex;
     flex-direction: column;
     width:100%;
-    height: 80%;
+    height: 75%;
     padding:1rem;
     overflow-y: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -60,7 +60,24 @@ const CheckoutBtn = styled.button`
     font-size: 1.2rem;
     font-weight: 900;
     text-transform: uppercase;
+    transition: background-color 200ms;
+    &:hover{
+        background-color: #2B8498;
+    }
 `
+const TotalBox = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    width: 40%;
+    margin:auto;
+`
+const TotalText = styled.span`
+    font-size: 1.2rem;
+    text-transform: uppercase;
+`
+
 
 CartWrap.CartBox = CartBox;
 CartWrap.CloseBtnBox = CloseBtnBox;
@@ -68,4 +85,6 @@ CartWrap.CloseBtn = CloseBtn;
 CartWrap.EmptyCart = EmptyCart;
 CartWrap.ProductsBox = ProductsBox;
 CartWrap.CheckoutBtn = CheckoutBtn;
+CartWrap.TotalBox = TotalBox;
+CartWrap.TotalText = TotalText;
 export default CartWrap;

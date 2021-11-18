@@ -8,6 +8,7 @@ const Item = styled.div`
     padding:1rem;
     margin-bottom: .5rem;
     background-color: #F6F5F2;
+    transition: background-color 200ms;
     & a{
         text-decoration: none;
         color: #000;

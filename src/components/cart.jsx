@@ -17,6 +17,8 @@ const Cart = () => {
         }
     }
     const cartItemsList = useSelector(state => state.cart.items);
+    const cartTotal = useSelector(state => state.cart.items).reduce((acumulator, cartItem) => acumulator + (cartItem.price * cartItem.quantity), 0);
+    const cartQuantity = useSelector(state => state.cart.items).reduce((accumulator, cartItem) => accumulator + cartItem.quantity, 0);
 
 
     return (
@@ -40,8 +42,13 @@ const Cart = () => {
 
                     }
                 </CartWrap.ProductsBox>
+                <CartWrap.TotalBox>
+                    <CartWrap.TotalText>Total:</CartWrap.TotalText>
+                    <CartWrap.TotalText>{cartQuantity}</CartWrap.TotalText>
+                    <CartWrap.TotalText>${cartTotal}</CartWrap.TotalText>
+                </CartWrap.TotalBox>
                 <CartWrap.CheckoutBtn>
-                    <FontAwesomeIcon icon={faMoneyCheckAlt} /> Checkout
+                    <FontAwesomeIcon icon={faMoneyCheckAlt} /> Checkout ${cartTotal}
                 </CartWrap.CheckoutBtn>
             </CartWrap.CartBox>
         </CartWrap>
