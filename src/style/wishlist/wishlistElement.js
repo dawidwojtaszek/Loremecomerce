@@ -11,6 +11,9 @@ const Element = styled.div`
     &:hover{
         background-color: #FBFBFA;
     }
+      @media(max-width:500px){
+        height: 70px;
+    }
 `
 const ImgBox = styled.div`
     width:20%;
@@ -19,12 +22,19 @@ const ImgBox = styled.div`
 const Img = styled.img`
     height: 100px;
     width: auto;
+      @media(max-width:500px){
+        height: 70px;
+    }
   
 `
 const Name = styled.span`
     font-size: 1.3rem;
     font-weight: 900;
     width: 30%;
+    @media(max-width:600px){
+        font-size: 1rem;
+        width: 40%;
+    }
 
 `
 const Category = styled.span`
@@ -32,11 +42,19 @@ const Category = styled.span`
     font-size: 1.3rem;
     font-weight: 300;
     width: 20%;
+      @media(max-width:600px){
+        font-size: 1rem;
+        
+    }
     
 `
 const Price = styled.span`
     font-size:1.3rem;
     width: 20%;
+      @media(max-width:500px){
+        font-size: 1rem;
+        width: 10%;
+    }
 `
 const RemoveBtn = styled.button`
     background: none;
@@ -49,6 +67,9 @@ const RemoveBtn = styled.button`
     transition: color 200ms;
     &:hover{
         color:#000;
+    }
+      @media(max-width:600px){
+        font-size: 1rem;
     }
     
  
