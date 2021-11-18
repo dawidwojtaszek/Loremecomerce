@@ -1,7 +1,7 @@
 import React from "react";
 import CartWrap from "../style/cart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faTimes, faMoneyCheckAlt } from "@fortawesome/free-solid-svg-icons";
 import { toggleCart } from "../redux/cart";
 import { useDispatch, useSelector } from "react-redux";
 import { useRef } from "react";
@@ -40,7 +40,9 @@ const Cart = () => {
 
                     }
                 </CartWrap.ProductsBox>
-                <CartWrap.CheckoutBtn>Checkout</CartWrap.CheckoutBtn>
+                <CartWrap.CheckoutBtn>
+                    <FontAwesomeIcon icon={faMoneyCheckAlt} /> Checkout
+                </CartWrap.CheckoutBtn>
             </CartWrap.CartBox>
         </CartWrap>
     )

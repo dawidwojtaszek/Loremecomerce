@@ -58,6 +58,7 @@ const CheckoutBtn = styled.button`
     cursor: pointer;
     border:none;
     font-size: 1.2rem;
+    font-weight: 900;
     text-transform: uppercase;
 `
 
