@@ -15,6 +15,7 @@ const Bestsellers = ({ bestsellerList }) => {
 
         dispatch(setBestsellers(bestsellerList));
         dispatch(setCurrentBestseller(allBestsellers));
+        // eslint-disable-next-line
     }, [])
 
     const currentList = useSelector(state => state.items.currentBestseller);

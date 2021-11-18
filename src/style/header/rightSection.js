@@ -17,6 +17,7 @@ export const RightSection = styled.div`
 export const RightElement = styled.div`
     display:flex;
     position: relative;
+    cursor: pointer;
     height: 30px;
     justify-content: space-between;
     align-items: center;

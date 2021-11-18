@@ -3,6 +3,7 @@ import itemsReducer from './items';
 import wishlistReducer from './wishlist';
 import modalReducer from './modal';
 import menuReducer from './mobileMenu';
+import cartReducer from './cart';
 
 export const store = configureStore({
     reducer: {
@@ -10,5 +11,6 @@ export const store = configureStore({
         wishlist: wishlistReducer,
         modal: modalReducer,
         menu: menuReducer,
+        cart: cartReducer,
     },
 })

@@ -24,8 +24,9 @@ const Title = styled.h3`
     color: ${({ theme }) => theme.colors.gray};
 `
 const EmptyList = styled.p`
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-align:center;
+    text-transform: uppercase;
 `
 const List = styled.div`
     display: flex;

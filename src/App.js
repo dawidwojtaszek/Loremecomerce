@@ -13,7 +13,7 @@ import WishlistPage from './pages/wishlist';
 import ShopPage from './pages/shop';
 import { Routes, Route } from 'react-router-dom';
 import SHOP_DATA from './assets/data/shopData';
-
+import Cart from './components/cart';
 
 
 function App() {
@@ -22,10 +22,12 @@ function App() {
 
   useEffect(() => {
     dispatch(setItemsList(SHOP_DATA));
+    // eslint-disable-next-line
   }, [])
 
   const modalHidden = useSelector(state => state.modal.hidden);
   const menuHidden = useSelector(state => state.menu.hidden);
+  const cartHidden = useSelector(state => state.cart.hidden);
 
   return (
     <ThemeProvider theme={theme}>
@@ -35,6 +37,9 @@ function App() {
       )}
       {menuHidden ? ('') : (
         <MobileMenu />
+      )}
+      {cartHidden ? ('') : (
+        <Cart />
       )}
 
       <HeaderComponent />

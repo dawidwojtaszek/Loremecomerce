@@ -16,23 +16,47 @@ const Container = styled.div`
     }
 `
 const Navigation = styled.div`
-    background-color: yellow;
+    background: #FAF9F7;
+    margin-top: 2rem;
+    padding: 1rem;
+    height: 500px;
     width: 25%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
         @media(max-width:920px){
         width: 100%;
         height: 100px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 `
 const NavigationTitle = styled.span`
     font-size: 1.7rem;
     text-transform: uppercase;
     font-weight: 300;
+    padding: 1rem;
+       @media(max-width:920px){
+        display: none;
+
+    }
 
 `
+const NavigationBtn = styled.button`
+    background: none;
+    border:none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    padding:1rem;
+    text-transform:uppercase;
+    @media(max-width:920px){
+        font-size:1rem;
+        padding: 0.5rem;
+
+    }
+`
 const ProductList = styled.div`
-    background-color: green;
     width: 75%;
     display: flex;
     justify-content:space-around;
@@ -43,6 +67,7 @@ const ProductList = styled.div`
 `
 Shop.Container = Container;
 Shop.Navigation = Navigation;
+Shop.NavigationBtn = NavigationBtn;
 Shop.NavigationTitle = NavigationTitle;
 Shop.ProductList = ProductList;
 

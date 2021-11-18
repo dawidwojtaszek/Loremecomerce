@@ -7,11 +7,13 @@ import { faShoppingCart, faBars } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from 'react-router-dom';
 import { toggleMenu } from "../redux/mobileMenu";
+import { toggleCart } from "../redux/cart";
 
 // import Cart from "./cart";
 const HeaderComponent = () => {
     const dispatch = useDispatch();
     const wishlistCounter = useSelector(state => state.wishlist.items).length;
+    const cartCounter = useSelector(state => state.cart.items).reduce((accumulator, cartItem) => accumulator + cartItem.quantity, 0);
 
     return (
         <Header>
@@ -41,12 +43,12 @@ const HeaderComponent = () => {
                             <Header.Counter>{wishlistCounter}</Header.Counter>
                         </Header.RightElement>
                     </Link>
-                    <Header.RightElement>
+                    <Header.RightElement onClick={() => dispatch(toggleCart())}>
                         <Header.ElementIcon >
                             <FontAwesomeIcon icon={faShoppingCart} />
                         </Header.ElementIcon>
                         Cart
-                        <Header.Counter>0</Header.Counter>
+                        <Header.Counter>{cartCounter}</Header.Counter>
                         {/* <Cart /> */}
                     </Header.RightElement>
                 </Header.RightSection>

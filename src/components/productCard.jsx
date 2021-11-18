@@ -6,6 +6,7 @@ import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { addItemToWishlist } from "../redux/wishlist";
 import { toggleModal, setCurrentElement } from "../redux/modal";
 import { useDispatch, useSelector } from "react-redux";
+import { addItem } from "../redux/cart";
 import '../style/elements/tooltip.css';
 
 const ProductCard = (props) => {
@@ -53,7 +54,7 @@ const ProductCard = (props) => {
                         <Card.Price>${price}</Card.Price>
                     </Card.PriceBox>
                 </Card.Info>
-                <Card.Btn><FontAwesomeIcon icon={faCartPlus} /> Add to cart</Card.Btn>
+                <Card.Btn onClick={() => dispatch(addItem(currentProduct))}><FontAwesomeIcon icon={faCartPlus} /> Add to cart</Card.Btn>
             </Card>
         </div>
     )
