@@ -10,6 +10,7 @@ const initialState = {
     items: [],
     bestsellers: [],
     currentBestseller: [],
+    currentShop: [],
 }
 
 export const itemsSlice = createSlice({
@@ -27,12 +28,18 @@ export const itemsSlice = createSlice({
         },
         filterCategory: (state, action) => {
             state.currentBestseller = filterBestseller(action.payload, state.bestsellers)
+        },
+        setCurrentShop: (state, action) => {
+            state.currentShop = action.payload
+        },
+        filterShopCategory: (state, action) => {
+            state.currentShop = state.items.filter(item => (item.category === action.payload))
         }
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { setItemsList, setBestsellers, setCurrentBestseller, filterCategory } = itemsSlice.actions;
+export const { setItemsList, setBestsellers, setCurrentBestseller, filterCategory, setCurrentShop, filterShopCategory } = itemsSlice.actions;
 
 export default itemsSlice.reducer
 
