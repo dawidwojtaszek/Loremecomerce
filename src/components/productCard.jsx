@@ -7,6 +7,7 @@ import { addItemToWishlist } from "../redux/wishlist";
 import { toggleModal, setCurrentElement } from "../redux/modal";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../redux/cart";
+import { Link } from "react-router-dom";
 import '../style/elements/tooltip.css';
 
 const ProductCard = (props) => {
@@ -21,7 +22,7 @@ const ProductCard = (props) => {
         <div>
             <Card>
                 <Card.ImageBox>
-                    <Card.Image src={imgUrl} />
+                    <Link to={`/product/${id}`}><Card.Image src={imgUrl} /></Link>
                     {tag ?
                         (<Card.Tag bg={tag === "new" ? ("#5BC8AF") : ("#0B7189")}>{tag}</Card.Tag>)
                         : ('')}
@@ -45,7 +46,7 @@ const ProductCard = (props) => {
                 </Card.ImageBox>
 
                 <Card.Info>
-                    <Card.Name>{name}</Card.Name>
+                    <Link to={`/product/${id}`}><Card.Name>{name}</Card.Name></Link>
                     <Card.Category>{category}</Card.Category>
                     <Card.PriceBox>
                         <Card.PriceTag>

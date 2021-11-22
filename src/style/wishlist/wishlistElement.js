@@ -33,6 +33,10 @@ const Name = styled.span`
     font-size: 1.3rem;
     font-weight: 900;
     width: 30%;
+    & a {
+        text-decoration: none;
+        color: #000;
+    }
     @media(max-width:600px){
         font-size: 1rem;
         width: 40%;

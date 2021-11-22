@@ -7,12 +7,12 @@ import { useDispatch } from "react-redux";
 import { addItem, reduceItem, toggleCart, removeItem } from "../redux/cart";
 const CartItem = ({ item }) => {
 
-    const { name, quantity, price } = item;
+    const { name, quantity, price, id } = item;
     const dispatch = useDispatch();
     return (
         <Item>
 
-            <Item.Name><Link to="/shop" onClick={() => dispatch(toggleCart())}>{name}</Link></Item.Name>
+            <Item.Name><Link to={`/product/${id}`} onClick={() => dispatch(toggleCart())}>{name}</Link></Item.Name>
             <Item.QuantityBox>
                 <Item.IconBox onClick={() => dispatch(reduceItem(item))}>
                     <FontAwesomeIcon icon={faChevronLeft} />

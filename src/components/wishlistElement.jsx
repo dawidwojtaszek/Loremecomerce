@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { removeItem } from "../redux/wishlist";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const WishlistElement = ({ name, category, price, imgUrl, id }) => {
 
@@ -14,7 +15,7 @@ const WishlistElement = ({ name, category, price, imgUrl, id }) => {
                 <Element.Img src={imgUrl} />
             </Element.ImgBox>
 
-            <Element.Name>{name}</Element.Name>
+            <Element.Name><Link to={`/product/${id}`}>{name}</Link></Element.Name>
             <Element.Category>{category}</Element.Category>
             <Element.Price>${price}</Element.Price>
             <Element.RemoveBtn onClick={() => dispatch(removeItem(id))}>

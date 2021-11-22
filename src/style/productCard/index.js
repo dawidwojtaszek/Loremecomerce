@@ -12,6 +12,10 @@ const Card = styled.div`
     -webkit-box-shadow: 7px 16px 25px 1px rgba(197, 197, 197, 1);
     -moz-box-shadow: 7px 16px 25px 1px rgba(197, 197, 197, 1);
     box-shadow: 7px 16px 25px 1px rgba(197, 197, 197, 1);
+    & a{
+        color: #000;
+        text-decoration: none;
+    }
 `
 Card.Btn = Btn;
 Card.Name = Name;
