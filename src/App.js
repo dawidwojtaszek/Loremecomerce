@@ -17,7 +17,6 @@ import { Routes, Route } from 'react-router-dom';
 import SHOP_DATA from './assets/data/shopData';
 import Cart from './components/cart';
 
-
 function App() {
 
   const dispatch = useDispatch();
