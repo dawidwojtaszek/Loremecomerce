@@ -12,7 +12,7 @@ const SHOP_DATA = [
     },
     {
         id: 2,
-        name: 'Lorem Bunie',
+        name: 'Lorem Bunie Lorem',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta asperiores commodi velit quisquam similique, officiis incidunt corrupti unde dolor sed?',
         category: 'jackets',
         price: 20,
@@ -23,7 +23,7 @@ const SHOP_DATA = [
     },
     {
         id: 3,
-        name: 'Lorem Bunie',
+        name: 'Lorem test',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta asperiores commodi velit quisquam similique, officiis incidunt corrupti unde dolor sed?',
         category: 'hat',
         price: 20,

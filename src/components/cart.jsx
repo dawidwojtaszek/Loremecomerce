@@ -6,7 +6,7 @@ import { toggleCart } from "../redux/cart";
 import { useDispatch, useSelector } from "react-redux";
 import { useRef } from "react";
 import CartItem from "./cartItem";
-
+import { Link } from "react-router-dom";
 
 const Cart = () => {
     const dispatch = useDispatch();
@@ -47,9 +47,14 @@ const Cart = () => {
                     <CartWrap.TotalText>{cartQuantity}</CartWrap.TotalText>
                     <CartWrap.TotalText>${cartTotal}</CartWrap.TotalText>
                 </CartWrap.TotalBox>
-                <CartWrap.CheckoutBtn>
-                    <FontAwesomeIcon icon={faMoneyCheckAlt} /> Checkout ${cartTotal}
-                </CartWrap.CheckoutBtn>
+                <CartWrap.BtnContainer>
+                    <Link to="/checkout">
+                        <CartWrap.CheckoutBtn onClick={() => dispatch(toggleCart())}>
+                            <FontAwesomeIcon icon={faMoneyCheckAlt} /> Checkout ${cartTotal}
+                        </CartWrap.CheckoutBtn>
+                    </Link>
+                </CartWrap.BtnContainer>
+
             </CartWrap.CartBox>
         </CartWrap>
     )

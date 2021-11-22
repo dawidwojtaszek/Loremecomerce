@@ -11,14 +11,19 @@ const Element = styled.div`
     &:hover{
         background-color: #FBFBFA;
     }
-      @media(max-width:500px){
+      @media(max-width:600px){
         height: 70px;
     }
 `
 const ImgBox = styled.div`
     width:20%;
+
     display: flex;
     align-items: center;
+    
+    @media(max-width:600px){
+        display: none;
+    }
 `
 const Img = styled.img`
     height: 100px;
@@ -36,6 +41,7 @@ const Name = styled.span`
     @media(max-width:600px){
         font-size: 1rem;
         width: 40%;
+        padding: 0.5rem;
     }
 `
 const Category = styled.span`
@@ -52,9 +58,26 @@ const Category = styled.span`
 const Price = styled.span`
     font-size:1.3rem;
     width: 20%;
-      @media(max-width:500px){
+      @media(max-width:600px){
         font-size: 1rem;
         width: 10%;
+    }
+`
+const CounterBox = styled.div`
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+`
+const CounterIcon = styled.div`
+    padding:0.5rem;
+`
+const Counter = styled.span`
+    font-size:1.3rem;
+    padding: 0.5rem;
+     @media(max-width:600px){
+        font-size: 1rem;
     }
 `
 const RemoveBtn = styled.button`
@@ -80,6 +103,9 @@ Element.Img = Img;
 Element.Name = Name;
 Element.Category = Category;
 Element.Price = Price;
+Element.CounterBox = CounterBox;
+Element.CounterIcon = CounterIcon;
+Element.Counter = Counter;
 Element.RemoveBtn = RemoveBtn;
 
 export default Element;

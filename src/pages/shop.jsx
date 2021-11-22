@@ -4,10 +4,11 @@ import ProductCard from "../components/productCard";
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentShop, filterShopCategory } from "../redux/items";
 import { useEffect } from "react";
+import SHOP_DATA from "../assets/data/shopData";
 
 const ShopPage = () => {
 
-    const allItems = useSelector(state => state.items.items);
+    const allItems = SHOP_DATA;
     const shortListItems = allItems.slice(0, 18);
     const dispatch = useDispatch();
     useEffect(() => {

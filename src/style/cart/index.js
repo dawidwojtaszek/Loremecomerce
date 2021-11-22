@@ -48,6 +48,12 @@ const ProductsBox = styled.div`
   display: none;
 }
 `
+const BtnContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+`
 const CheckoutBtn = styled.button`
     width:400px;
     margin:auto;
@@ -85,6 +91,7 @@ CartWrap.CloseBtn = CloseBtn;
 CartWrap.EmptyCart = EmptyCart;
 CartWrap.ProductsBox = ProductsBox;
 CartWrap.CheckoutBtn = CheckoutBtn;
+CartWrap.BtnContainer = BtnContainer;
 CartWrap.TotalBox = TotalBox;
 CartWrap.TotalText = TotalText;
 export default CartWrap;
