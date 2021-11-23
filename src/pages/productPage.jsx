@@ -5,10 +5,11 @@ import Product from '../style/productPage';
 import TabComponent from "../components/tab";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
+import Rating from "../components/rating";
+
 const ProductPage = () => {
     const id = useParams();
     const product = useSelector(state => state.items.items).filter(item => (item.id === parseInt(id.id, 10)))[0];
-    console.log(product);
     return (
         <Product>
             <Product.Container>
@@ -22,6 +23,7 @@ const ProductPage = () => {
                     <Product.Category>
                         {product.category}
                     </Product.Category>
+                    <Rating rate={product.rating} />
                     <Product.Description>
                         {product.description}
                     </Product.Description>
