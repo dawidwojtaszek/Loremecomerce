@@ -67,13 +67,43 @@ const Description = styled.p`
 const Price = styled.span`
     font-size: 2rem;
 `
+const RatingBox = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    align-items: center;
+    margin-top: 1.5rem;
+`
+const RatingValue = styled.span`
+    font-size: 1.3rem;
+    color:${({ theme }) => theme.colors.gray};
+`
+
+const CartBtn = styled.button`
+     background: ${({ theme }) => theme.colors.primary};
+    border: none;
+    color:white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    width: 230px;
+    height: 50px;
+    &:hover{
+        opacity:0.85;
+    }
+`
 
 Product.Container = Container;
 Product.ImgBox = ImgBox;
 Product.Img = Img;
 Product.InfoBox = InfoBox;
 Product.Name = Name;
+Product.RatingBox = RatingBox;
+Product.RatingValue = RatingValue;
 Product.Category = Category;
 Product.Description = Description;
 Product.Price = Price;
+Product.CartBtn = CartBtn;
 export default Product;

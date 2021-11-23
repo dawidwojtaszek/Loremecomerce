@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const RatingBox = styled.div`
-    margin-top: 1.5rem;
     width:141px;
     height: 25px;
     font-size: 25px;

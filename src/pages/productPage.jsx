@@ -4,12 +4,15 @@ import { useParams } from "react-router";
 import Product from '../style/productPage';
 import TabComponent from "../components/tab";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTag } from "@fortawesome/free-solid-svg-icons";
+import { faTag, faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import Rating from "../components/rating";
+import { useDispatch } from "react-redux";
+import { addItem } from "../redux/cart";
 
 const ProductPage = () => {
     const id = useParams();
     const product = useSelector(state => state.items.items).filter(item => (item.id === parseInt(id.id, 10)))[0];
+    const dispatch = useDispatch();
     return (
         <Product>
             <Product.Container>
@@ -23,7 +26,11 @@ const ProductPage = () => {
                     <Product.Category>
                         {product.category}
                     </Product.Category>
-                    <Rating rate={product.rating} />
+                    <Product.RatingBox>
+                        <Rating rate={product.rating} />
+                        {product.rating}/5
+                    </Product.RatingBox>
+
                     <Product.Description>
                         {product.description}
                     </Product.Description>
@@ -31,6 +38,9 @@ const ProductPage = () => {
                         <FontAwesomeIcon icon={faTag} />
                         ${product.price}
                     </Product.Price>
+                    <Product.CartBtn onClick={() => dispatch(addItem(product))}>
+                        <FontAwesomeIcon icon={faCartPlus} /> Add to cart
+                    </Product.CartBtn>
                 </Product.InfoBox>
             </Product.Container>
             <TabComponent />
