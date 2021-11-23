@@ -7,21 +7,26 @@ const Product = styled.div`
 const Container = styled.div`
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    min-height: 600px;
+    margin-top: 2rem;
     width: 100%;
+    background-color: violet;
+    
 `
 const ImgBox = styled.div`
     background-color: yellow;
-    height: 100px;
+    height: 600px;
 `
 const Img = styled.img`
-
+    height: 100%;
 `
 
 const InfoBox = styled.div`
     background-color: green;
     height: 100px;
+    width: 55%;
 `
+
 
 Product.Container = Container;
 Product.ImgBox = ImgBox;

@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router";
 import Product from '../style/productPage';
+import TabComponent from "../components/tab";
+
 const ProductPage = () => {
     const id = useParams();
     const product = useSelector(state => state.items.items).filter(item => (item.id === parseInt(id.id, 10)))[0];
@@ -14,6 +16,7 @@ const ProductPage = () => {
                 </Product.ImgBox>
                 <Product.InfoBox>{product.name}</Product.InfoBox>
             </Product.Container>
+            <TabComponent />
         </Product>
     )
 }
