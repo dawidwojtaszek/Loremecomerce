@@ -57,6 +57,13 @@ export const ProductPrice = styled.span`
     font-size: 2.2rem;
     
 `
+export const BtnBox = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    margin-top: 2rem;
+`
 export const ProductBtn = styled.button`
     background: ${({ theme }) => theme.colors.primary};
     border: none;
@@ -65,7 +72,6 @@ export const ProductBtn = styled.button`
     text-transform: uppercase;
     font-weight: 300;
     font-size: 1.3rem;
-    margin-top: 2rem;
     width: 230px;
     height: 50px;
     &:hover{

@@ -7,6 +7,8 @@ import { toggleModal } from "../redux/modal";
 import { addItem } from "../redux/cart";
 import { useRef } from "react";
 import { notify } from "./toast";
+import WishlistBtn from "./wishlistBtn";
+
 
 const Modal = () => {
     const dispatch = useDispatch();
@@ -51,9 +53,13 @@ const Modal = () => {
                         <ModalWrap.ProductPrice>
                             <FontAwesomeIcon icon={faTag} /> ${product.price}
                         </ModalWrap.ProductPrice>
-                        <ModalWrap.ProductBtn onClick={() => handleAddToCart(product)}>
-                            <FontAwesomeIcon icon={faCartPlus} /> Add To cart
-                        </ModalWrap.ProductBtn>
+                        <ModalWrap.BtnBox>
+                            <ModalWrap.ProductBtn onClick={() => handleAddToCart(product)}>
+                                <FontAwesomeIcon icon={faCartPlus} /> Add To cart
+                            </ModalWrap.ProductBtn>
+                            <WishlistBtn itemToAdd={product} />
+                        </ModalWrap.BtnBox>
+
                     </ModalWrap.Product>
                 </ModalWrap.Info>
 
