@@ -78,16 +78,21 @@ const RatingValue = styled.span`
     font-size: 1.3rem;
     color:${({ theme }) => theme.colors.gray};
 `
-
+const BtnBox = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin-top: 2rem;
+`
 const CartBtn = styled.button`
-     background: ${({ theme }) => theme.colors.primary};
+    background: ${({ theme }) => theme.colors.primary};
     border: none;
     color:white;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 300;
     font-size: 1.3rem;
-    margin-top: 2rem;
     width: 230px;
     height: 50px;
     &:hover{
@@ -106,4 +111,5 @@ Product.Category = Category;
 Product.Description = Description;
 Product.Price = Price;
 Product.CartBtn = CartBtn;
+Product.BtnBox = BtnBox;
 export default Product;

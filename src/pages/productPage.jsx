@@ -6,6 +6,7 @@ import TabComponent from "../components/tab";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag, faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import Rating from "../components/rating";
+import WishlistBtn from "../components/wishlistBtn";
 import { useDispatch } from "react-redux";
 import { addItem } from "../redux/cart";
 import { notify } from '../components/toast';
@@ -44,9 +45,13 @@ const ProductPage = () => {
                         <FontAwesomeIcon icon={faTag} />
                         ${product.price}
                     </Product.Price>
-                    <Product.CartBtn onClick={() => handleAddToCart(product)}>
-                        <FontAwesomeIcon icon={faCartPlus} /> Add to cart
-                    </Product.CartBtn>
+                    <Product.BtnBox>
+                        <Product.CartBtn onClick={() => handleAddToCart(product)}>
+                            <FontAwesomeIcon icon={faCartPlus} /> Add to cart
+                        </Product.CartBtn>
+                        <WishlistBtn itemToAdd={product} />
+                    </Product.BtnBox>
+
                 </Product.InfoBox>
             </Product.Container>
             <TabComponent />
