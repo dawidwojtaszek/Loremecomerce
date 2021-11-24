@@ -28,6 +28,10 @@ const CloseBtn = styled.button`
 const NavLinks = styled.ul`
     display: flex;
     flex-direction: column;
+    a{
+        color:#000;
+        text-decoration: none;
+    }
 `
 
 const LinkElement = styled.li`
@@ -40,12 +44,17 @@ const BottomSection = styled.div`
     flex-direction: column;
     align-items: start;
     padding-left: 40px;
+    a{
+        color:#000;
+        text-decoration: none;
+    }
 `
 const BottomElement = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding:1rem 1rem 1rem 0;
+
 `
 const Counter = styled.div`
     color:#fff;
