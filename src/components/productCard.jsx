@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../redux/cart";
 import { Link } from "react-router-dom";
 import '../style/elements/tooltip.css';
+import { notify } from "./toast";
+
 
 const ProductCard = (props) => {
 
@@ -17,6 +19,16 @@ const ProductCard = (props) => {
     const dispatch = useDispatch();
     const wishList = useSelector(state => state.wishlist.items);
     const existingItem = wishList.filter(item => { return item.id === id })
+
+    const handleAddToCart = (itemToAdd) => {
+        dispatch(addItem(itemToAdd));
+        notify(`You add item to cart`);
+    }
+    const handleAddToWishlist = (itemToAdd, message) => {
+        dispatch(addItemToWishlist(itemToAdd));
+        notify(message);
+    }
+
     return (
 
         <div>
@@ -29,12 +41,12 @@ const ProductCard = (props) => {
                     {
                         existingItem.length > 0 ?
                             (
-                                <Card.WishlistBtn color='#CF2626' opacity="1" onClick={() => dispatch(addItemToWishlist(currentProduct))} data-tooltip="Wishlist" data-flow="left" >
+                                <Card.WishlistBtn color='#CF2626' opacity="1" onClick={() => handleAddToWishlist(currentProduct, 'You REMOVE item from wishlist')} data-tooltip="Wishlist" data-flow="left" >
                                     <FontAwesomeIcon icon={faHeart} />
                                 </Card.WishlistBtn>
                             )
                             : (
-                                <Card.WishlistBtn color="#F4F3EF" opacity="1" onClick={() => dispatch(addItemToWishlist(currentProduct))} data-tooltip="Wishlist" data-flow="left" >
+                                <Card.WishlistBtn color="#F4F3EF" opacity="1" onClick={() => handleAddToWishlist(currentProduct, 'You ADD item to wishlist')} data-tooltip="Wishlist" data-flow="left" >
                                     <FontAwesomeIcon icon={faHeart} />
                                 </Card.WishlistBtn>
                             )
@@ -55,7 +67,7 @@ const ProductCard = (props) => {
                         <Card.Price>${price}</Card.Price>
                     </Card.PriceBox>
                 </Card.Info>
-                <Card.Btn onClick={() => dispatch(addItem(currentProduct))}><FontAwesomeIcon icon={faCartPlus} /> Add to cart</Card.Btn>
+                <Card.Btn onClick={() => handleAddToCart(currentProduct)}><FontAwesomeIcon icon={faCartPlus} /> Add to cart</Card.Btn>
             </Card>
         </div>
     )

@@ -8,11 +8,17 @@ import { faTag, faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import Rating from "../components/rating";
 import { useDispatch } from "react-redux";
 import { addItem } from "../redux/cart";
-
+import { notify } from '../components/toast';
 const ProductPage = () => {
     const id = useParams();
     const product = useSelector(state => state.items.items).filter(item => (item.id === parseInt(id.id, 10)))[0];
     const dispatch = useDispatch();
+
+    const handleAddToCart = (itemToAdd) => {
+        dispatch(addItem(itemToAdd));
+        notify("You ADD item to cart");
+    }
+
     return (
         <Product>
             <Product.Container>
@@ -38,7 +44,7 @@ const ProductPage = () => {
                         <FontAwesomeIcon icon={faTag} />
                         ${product.price}
                     </Product.Price>
-                    <Product.CartBtn onClick={() => dispatch(addItem(product))}>
+                    <Product.CartBtn onClick={() => handleAddToCart(product)}>
                         <FontAwesomeIcon icon={faCartPlus} /> Add to cart
                     </Product.CartBtn>
                 </Product.InfoBox>

@@ -16,7 +16,8 @@ import ProductPage from './pages/productPage';
 import { Routes, Route } from 'react-router-dom';
 import SHOP_DATA from './assets/data/shopData';
 import Cart from './components/cart';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -55,6 +56,17 @@ function App() {
       </Routes>
 
       <Footer />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </ThemeProvider>
   );
 }

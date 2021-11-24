@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleModal } from "../redux/modal";
 import { addItem } from "../redux/cart";
 import { useRef } from "react";
+import { notify } from "./toast";
 
 const Modal = () => {
     const dispatch = useDispatch();
@@ -15,6 +16,10 @@ const Modal = () => {
         if (modalRef.current === element.target) {
             dispatch(toggleModal())
         }
+    }
+    const handleAddToCart = (itemToAdd) => {
+        dispatch(addItem(itemToAdd));
+        notify('You ADD item to cart');
     }
 
     return (
@@ -46,7 +51,7 @@ const Modal = () => {
                         <ModalWrap.ProductPrice>
                             <FontAwesomeIcon icon={faTag} /> ${product.price}
                         </ModalWrap.ProductPrice>
-                        <ModalWrap.ProductBtn onClick={() => dispatch(addItem(product))}>
+                        <ModalWrap.ProductBtn onClick={() => handleAddToCart(product)}>
                             <FontAwesomeIcon icon={faCartPlus} /> Add To cart
                         </ModalWrap.ProductBtn>
                     </ModalWrap.Product>

@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap');
@@ -10,6 +10,9 @@ const GlobalStyle = createGlobalStyle`
     body{
         font-family: 'Jost', sans-serif;
      
+    }
+    .Toastify__toast-container--top-right{
+        top:100px;
     }
 
 `
