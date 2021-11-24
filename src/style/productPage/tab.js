@@ -31,7 +31,7 @@ const ContentBox = styled.div`
     max-width: 700px;
     padding:1rem;
 `
-const Content = styled.p`
+const Content = styled.div`
     font-size: 1.4rem;
 `
 const List = styled.ul`

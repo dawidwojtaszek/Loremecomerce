@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router";
 import Product from '../style/productPage';
 import TabComponent from "../components/tab";
+import Related from "../components/related";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag, faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import Rating from "../components/rating";
@@ -55,6 +56,7 @@ const ProductPage = () => {
                 </Product.InfoBox>
             </Product.Container>
             <TabComponent />
+            <Related category={product.category} id={product.id} />
         </Product>
     )
 }
