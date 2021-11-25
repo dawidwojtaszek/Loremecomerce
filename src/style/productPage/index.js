@@ -48,6 +48,24 @@ const InfoBox = styled.div`
         width: 400px;
     }
 `
+const NameBox = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+`
+const Tag = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 60px;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background: ${({ bg }) => bg ? (bg) : ('#4894A6')};
+    margin-left: 2rem;
+`
 const Name = styled.h3`
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -105,6 +123,8 @@ Product.ImgBox = ImgBox;
 Product.Img = Img;
 Product.InfoBox = InfoBox;
 Product.Name = Name;
+Product.NameBox = NameBox;
+Product.Tag = Tag;
 Product.RatingBox = RatingBox;
 Product.RatingValue = RatingValue;
 Product.Category = Category;

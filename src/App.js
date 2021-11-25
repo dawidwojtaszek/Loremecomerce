@@ -13,6 +13,7 @@ import WishlistPage from './pages/wishlist';
 import ShopPage from './pages/shop';
 import CheckoutPage from './pages/checkout';
 import ProductPage from './pages/productPage';
+import SignInPage from './pages/signin';
 import { Routes, Route } from 'react-router-dom';
 import SHOP_DATA from './assets/data/shopData';
 import Cart from './components/cart';
@@ -52,6 +53,7 @@ function App() {
         <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/signin" element={<SignInPage />} />
         <Route path="/product/:id" element={<ProductPage />} />
       </Routes>
 

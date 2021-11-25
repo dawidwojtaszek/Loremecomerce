@@ -28,12 +28,14 @@ const HeaderComponent = () => {
                     </Header.Links>
                 </Header.Nav>
                 <Header.RightSection>
-                    <Header.RightElement border>
-                        <Header.ElementIcon >
-                            <FontAwesomeIcon icon={faUserCircle} />
-                        </Header.ElementIcon>
-                        Sign in
-                    </Header.RightElement>
+                    <Link to="/signin">
+                        <Header.RightElement border>
+                            <Header.ElementIcon >
+                                <FontAwesomeIcon icon={faUserCircle} />
+                            </Header.ElementIcon>
+                            Sign in
+                        </Header.RightElement>
+                    </Link>
                     <Link to="/wishlist">
                         <Header.RightElement border>
                             <Header.ElementIcon >

@@ -21,6 +21,7 @@ const ProductPage = () => {
         notify("You ADD item to cart");
     }
 
+
     return (
         <Product>
             <Product.Container>
@@ -28,9 +29,15 @@ const ProductPage = () => {
                     <Product.Img src={product.imgUrl} />
                 </Product.ImgBox>
                 <Product.InfoBox>
-                    <Product.Name>
-                        {product.name}
-                    </Product.Name>
+                    <Product.NameBox>
+                        <Product.Name>
+                            {product.name}
+                        </Product.Name>
+                        {product.tag ? (<Product.Tag bg={product.tag === "new" ? ("#5BC8AF") : ("#0B7189")}>{product.tag}</Product.Tag>) : ('')}
+
+
+                    </Product.NameBox>
+
                     <Product.Category>
                         {product.category}
                     </Product.Category>

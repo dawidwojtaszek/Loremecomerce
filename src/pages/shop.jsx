@@ -33,7 +33,7 @@ const ShopPage = () => {
                 <Shop.ProductList>
                     {
                         itemListToRender.map(item => (
-                            <ProductCard key={item.id} name={item.name} price={item.price} imgUrl={item.imgUrl} id={item.id} category={item.category} description={item.description} />
+                            <ProductCard key={item.id} name={item.name} price={item.price} imgUrl={item.imgUrl} id={item.id} category={item.category} description={item.description} tag={item.tag} />
                         ))
                     }
                 </Shop.ProductList>
