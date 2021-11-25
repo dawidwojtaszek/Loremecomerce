@@ -14,9 +14,10 @@ const Related = ({ category, id }) => {
             <RelatedSection.ProductsBox>
                 {
                     items.map(item => (
-                        <ProductCard key={item.id} name={item.name} category={item.category} price={item.price} imgUrl={item.imgUrl} tag={item.tag} id={item.id} description={item.description} tag={item.tag} />
+                        <ProductCard key={item.id} name={item.name} category={item.category} price={item.price} imgUrl={item.imgUrl} tag={item.tag} id={item.id} description={item.description} />
                     ))
                 }
+
             </RelatedSection.ProductsBox>
         </RelatedSection>
     )
