@@ -23,8 +23,8 @@ const HeaderComponent = () => {
                     <Header.Links>
                         <Header.LinkElement><Link to="/">Home</Link></Header.LinkElement>
                         <Header.LinkElement><Link to="/shop">Shop</Link></Header.LinkElement>
-                        <Header.LinkElement><Link to="/">Blog</Link></Header.LinkElement>
-                        <Header.LinkElement><Link to="/">Contact</Link></Header.LinkElement>
+                        <Header.LinkElement><Link to="/blog">Blog</Link></Header.LinkElement>
+                        <Header.LinkElement><Link to="/contact">Contact</Link></Header.LinkElement>
                     </Header.Links>
                 </Header.Nav>
                 <Header.RightSection>

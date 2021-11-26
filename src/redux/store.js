@@ -8,6 +8,7 @@ import wishlistReducer from './wishlist';
 import modalReducer from './modal';
 import menuReducer from './mobileMenu';
 import cartReducer from './cart';
+import blogReducer from './blog';
 
 const reducers = combineReducers(
     {
@@ -16,6 +17,7 @@ const reducers = combineReducers(
         modal: modalReducer,
         menu: menuReducer,
         cart: cartReducer,
+        blog: blogReducer
     }
 )
 
