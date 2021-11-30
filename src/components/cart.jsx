@@ -22,8 +22,9 @@ const Cart = () => {
 
 
     return (
-        <CartWrap ref={cartRef} onClick={closeCart}>
-            <CartWrap.CartBox>
+
+        <CartWrap ref={cartRef} onClick={closeCart} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }} exit={{ opacity: 0 }}>
+            <CartWrap.CartBox initial={{ x: "100%" }} animate={{ x: 0 }} transition={{ type: "tween" }} exit={{ x: "100%" }}>
                 <CartWrap.CloseBtnBox>
                     <CartWrap.CloseBtn onClick={() => dispatch(toggleCart())}>
                         <FontAwesomeIcon icon={faTimes} />
@@ -57,6 +58,7 @@ const Cart = () => {
 
             </CartWrap.CartBox>
         </CartWrap>
+
     )
 }
 

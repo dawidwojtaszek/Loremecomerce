@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const CartWrap = styled.div`
+const CartWrap = styled(motion.div)`
     position: fixed;
     background: rgba(0,0,0,0.8);
     width: 100%;
     height: 100vh;
     z-index: 2;
 `
-const CartBox = styled.div`
+const CartBox = styled(motion.div)`
     background: #fff;
     width: 520px;
     height: 100%;

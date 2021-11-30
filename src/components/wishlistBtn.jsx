@@ -7,6 +7,7 @@ import { addItemToWishlist } from "../redux/wishlist";
 import { notify } from "./toast";
 import '../style/elements/tooltip.css';
 
+
 const WishlistBtn = ({ itemToAdd }) => {
 
     const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const WishlistBtn = ({ itemToAdd }) => {
     }
 
     return (
-        <Heart data-tooltip="Wishlist" data-flow="bottom">
+        <Heart data-tooltip="Wishlist" data-flow="bottom" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
             {existingItem.length === 0 ? (
                 <FontAwesomeIcon icon={faHeart} color="#d6d2d2" onClick={() => handleAddToWishlist(itemToAdd, "You ADD item to wishlist")} />
             ) : (

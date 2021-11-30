@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 export const CloseContainer = styled.div`
     display: flex;
     justify-content: end;
@@ -64,7 +64,7 @@ export const BtnBox = styled.div`
     width: 300px;
     margin-top: 2rem;
 `
-export const ProductBtn = styled.button`
+export const ProductBtn = styled(motion.button)`
     background: ${({ theme }) => theme.colors.primary};
     border: none;
     color:white;

@@ -54,7 +54,7 @@ const ProductPage = () => {
                         ${product.price}
                     </Product.Price>
                     <Product.BtnBox>
-                        <Product.CartBtn onClick={() => handleAddToCart(product)}>
+                        <Product.CartBtn onClick={() => handleAddToCart(product)} whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
                             <FontAwesomeIcon icon={faCartPlus} /> Add to cart
                         </Product.CartBtn>
                         <WishlistBtn itemToAdd={product} />

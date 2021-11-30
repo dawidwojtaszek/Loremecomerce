@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const Element = styled.div`
+const Element = styled(motion.div)`
     width: 100%;
     height: 100px;
     background-color: #F6F5F2;

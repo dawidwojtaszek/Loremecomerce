@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { CloseContainer, CloseBtn, Product, ProductTitle, ProductDescription, ProductPrice, ProductBtn, ProductCategory, BtnBox } from "./info";
+import { motion } from "framer-motion";
 
-const ModalWrap = styled.div`
+const ModalWrap = styled(motion.div)`
     position: fixed;
     background: rgba(0,0,0,0.8);
     width: 100%;
@@ -12,7 +13,7 @@ const ModalWrap = styled.div`
     justify-content: center;
   
 `
-const ModalContainer = styled.div`
+const ModalContainer = styled(motion.div)`
     width: 70%;
     height: 80%;
     z-index: 3;

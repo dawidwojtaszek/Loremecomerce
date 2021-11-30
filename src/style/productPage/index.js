@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 const Product = styled.div`
     max-width: ${({ theme }) => theme.size.container};
     margin:auto;
@@ -103,7 +103,7 @@ const BtnBox = styled.div`
     width: 300px;
     margin-top: 2rem;
 `
-const CartBtn = styled.button`
+const CartBtn = styled(motion.button)`
     background: ${({ theme }) => theme.colors.primary};
     border: none;
     color:white;

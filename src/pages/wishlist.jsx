@@ -3,6 +3,7 @@ import Element from "../components/wishlistElement";
 import WishlistWrap from "../style/wishlist";
 import { clearAll } from "../redux/wishlist";
 import { useSelector, useDispatch } from "react-redux";
+import { AnimatePresence } from "framer-motion";
 
 const WishlistPage = () => {
 
@@ -18,11 +19,13 @@ const WishlistPage = () => {
                     Your wishlist is empty
                 </WishlistWrap.EmptyList>) : (
                     <WishlistWrap.List>
-                        {
-                            wishlist.map(item => (
-                                <Element key={item.id} name={item.name} category={item.category} price={item.price} imgUrl={item.imgUrl} id={item.id} />
-                            ))
-                        }
+                        <AnimatePresence>
+                            {
+                                wishlist.map(item => (
+                                    <Element key={item.id} name={item.name} category={item.category} price={item.price} imgUrl={item.imgUrl} id={item.id} />
+                                ))
+                            }
+                        </AnimatePresence>
                         <WishlistWrap.ClearListBtn onClick={() => dispatch(clearAll())}>
                             Clear all
                         </WishlistWrap.ClearListBtn>

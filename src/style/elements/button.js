@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const Button = styled.button`
+export const Button = styled(motion.button)`
    width: 200px;
    text-transform: uppercase;
    font-weight: bold;

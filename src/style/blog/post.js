@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Post = styled.div`
     display: flex;
@@ -14,18 +15,20 @@ const Post = styled.div`
 `
 const ImageBox = styled.div`
     height: 300px;
-    width: 40%;
+    width: 600px;
     overflow: hidden;
     display: flex;
     justify-content: flex-start;
+    overflow: hidden;
     @media(max-width:900px){
         width: 100%;
         justify-content: center;
     }
 `
-const Img = styled.img`
+const Img = styled(motion.img)`
     height: 300px;
     width: auto;
+
  
 `
 

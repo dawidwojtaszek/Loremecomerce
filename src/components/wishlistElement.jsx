@@ -6,11 +6,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
+
 const WishlistElement = ({ name, category, price, imgUrl, id }) => {
 
     const dispatch = useDispatch();
     return (
-        <Element>
+
+        <Element initial={{ opacity: 0, x: 0 }} exit={{ opacity: 0, x: "-100%" }} animate={{ opacity: 1 }} transition={{ type: "tween", duration: 0.2 }} key={id}>
             <Element.ImgBox>
                 <Element.Img src={imgUrl} />
             </Element.ImgBox>
@@ -22,6 +24,7 @@ const WishlistElement = ({ name, category, price, imgUrl, id }) => {
                 <FontAwesomeIcon icon={faTimes} />
             </Element.RemoveBtn>
         </Element>
+
     )
 }
 

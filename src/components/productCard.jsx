@@ -34,25 +34,25 @@ const ProductCard = (props) => {
         <div>
             <Card>
                 <Card.ImageBox>
-                    <Link to={`/product/${id}`}><Card.Image src={imgUrl} /></Link>
+                    <Link to={`/product/${id}`}><Card.Image src={imgUrl} whileHover={{ scale: 1.1 }} transition={{ duration: 0.4 }} /></Link>
                     {tag ?
                         (<Card.Tag bg={tag === "new" ? ("#5BC8AF") : ("#0B7189")}>{tag}</Card.Tag>)
                         : ('')}
                     {
                         existingItem.length > 0 ?
                             (
-                                <Card.WishlistBtn color='#CF2626' opacity="1" onClick={() => handleAddToWishlist(currentProduct, 'You REMOVE item from wishlist')} data-tooltip="Wishlist" data-flow="left" >
+                                <Card.WishlistBtn color='#CF2626' opacity="1" onClick={() => handleAddToWishlist(currentProduct, 'You REMOVE item from wishlist')} data-tooltip="Wishlist" data-flow="left" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
                                     <FontAwesomeIcon icon={faHeart} />
                                 </Card.WishlistBtn>
                             )
                             : (
-                                <Card.WishlistBtn color="#F4F3EF" opacity="1" onClick={() => handleAddToWishlist(currentProduct, 'You ADD item to wishlist')} data-tooltip="Wishlist" data-flow="left" >
+                                <Card.WishlistBtn color="#F4F3EF" opacity="1" onClick={() => handleAddToWishlist(currentProduct, 'You ADD item to wishlist')} data-tooltip="Wishlist" data-flow="left" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}  >
                                     <FontAwesomeIcon icon={faHeart} />
                                 </Card.WishlistBtn>
                             )
 
                     }
-                    <Card.QuickView onClick={() => { dispatch(toggleModal()); dispatch(setCurrentElement(currentProduct)) }} data-tooltip="Quick view" data-flow="left">
+                    <Card.QuickView onClick={() => { dispatch(toggleModal()); dispatch(setCurrentElement(currentProduct)) }} data-tooltip="Quick view" data-flow="left" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                         <FontAwesomeIcon icon={faEye} />
                     </Card.QuickView>
                 </Card.ImageBox>
@@ -67,7 +67,7 @@ const ProductCard = (props) => {
                         <Card.Price>${price}</Card.Price>
                     </Card.PriceBox>
                 </Card.Info>
-                <Card.Btn onClick={() => handleAddToCart(currentProduct)}><FontAwesomeIcon icon={faCartPlus} /> Add to cart</Card.Btn>
+                <Card.Btn onClick={() => handleAddToCart(currentProduct)} whileTap={{ scale: 0.95 }}><FontAwesomeIcon icon={faCartPlus} /> Add to cart</Card.Btn>
             </Card>
         </div>
     )

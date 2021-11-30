@@ -8,6 +8,7 @@ import { addItem } from "../redux/cart";
 import { useRef } from "react";
 import { notify } from "./toast";
 import WishlistBtn from "./wishlistBtn";
+import { AnimatePresence } from "framer-motion";
 
 
 const Modal = () => {
@@ -25,8 +26,9 @@ const Modal = () => {
     }
 
     return (
-        <ModalWrap ref={modalRef} onClick={closeModal}>
-            <ModalWrap.Container >
+        <ModalWrap ref={modalRef} onClick={closeModal} animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} transition={{ type: 'tween' }}>
+
+            <ModalWrap.Container animate={{ x: 0 }} initial={{ x: "-100%" }} transition={{ type: "tween" }} exit={{ x: '100%' }} >
 
                 <ModalWrap.ImgBox>
                     <ModalWrap.Img src={product.imgUrl} />
@@ -54,7 +56,7 @@ const Modal = () => {
                             <FontAwesomeIcon icon={faTag} /> ${product.price}
                         </ModalWrap.ProductPrice>
                         <ModalWrap.BtnBox>
-                            <ModalWrap.ProductBtn onClick={() => handleAddToCart(product)}>
+                            <ModalWrap.ProductBtn onClick={() => handleAddToCart(product)} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                                 <FontAwesomeIcon icon={faCartPlus} /> Add To cart
                             </ModalWrap.ProductBtn>
                             <WishlistBtn itemToAdd={product} />
@@ -64,6 +66,7 @@ const Modal = () => {
                 </ModalWrap.Info>
 
             </ModalWrap.Container>
+
         </ModalWrap>
     )
 }

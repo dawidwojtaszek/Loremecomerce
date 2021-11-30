@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const Heart = styled.div`
+const Heart = styled(motion.div)`
     height: 50px;
     width: 50px;
     svg{

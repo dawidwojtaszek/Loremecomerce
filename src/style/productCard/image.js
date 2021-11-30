@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 
 export const ImageBox = styled.div`
     position: relative;
@@ -8,7 +8,7 @@ export const ImageBox = styled.div`
     display: block;
     overflow: hidden;
 `
-export const Image = styled.img`
+export const Image = styled(motion.img)`
     position: absolute;
     width: 100%;
 
@@ -28,7 +28,7 @@ export const Tag = styled.div`
     text-transform: uppercase;
     background: ${({ bg }) => bg ? (bg) : ('#4894A6')};
 `
-export const WishlistBtn = styled.button`
+export const WishlistBtn = styled(motion.button)`
     position: absolute;
     z-index: 1;
     top:10px;
@@ -43,7 +43,7 @@ export const WishlistBtn = styled.button`
 
 
 `
-export const QuickView = styled.button`
+export const QuickView = styled(motion.button)`
     position: absolute;
     z-index: 1;
     top:55px;

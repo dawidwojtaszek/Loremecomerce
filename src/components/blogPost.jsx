@@ -5,7 +5,7 @@ const BlogPost = ({ title, body, id }) => {
     return (
         <Post>
             <Post.ImageBox>
-                <Post.Img src={`https://picsum.photos/600/400?random=${id}}`} />
+                <Post.Img src={`https://picsum.photos/600/400?random=${id}}`} whileHover={{ scale: 1.1 }} transition={{ duration: 0.4 }} />
             </Post.ImageBox>
             <Post.Info>
                 <Post.Title>{title}</Post.Title>

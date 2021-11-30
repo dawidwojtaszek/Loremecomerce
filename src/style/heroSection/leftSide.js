@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const InfoBox = styled.div`
     padding-left: 1rem;
@@ -9,7 +10,7 @@ export const InfoBox = styled.div`
     }
 `
 
-export const InfoTitle = styled.h2`
+export const InfoTitle = styled(motion.h2)`
     padding:1rem 0;
     font-size: 3rem;
     font-weight: bold;
@@ -18,7 +19,7 @@ export const InfoTitle = styled.h2`
         font-size: 1.8rem;
     }
 `
-export const InfoSubtitle = styled.p`
+export const InfoSubtitle = styled(motion.p)`
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 2rem;
