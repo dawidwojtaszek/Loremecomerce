@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 const Related = ({ category, id }) => {
 
     const items = useSelector(state => state.items.items).filter(item => item.category === category).filter(item => item.id !== id).slice(0, 4);
-    console.log(items);
     return (
         <RelatedSection>
             <Title>You Might Also Like</Title>

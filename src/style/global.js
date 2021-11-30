@@ -12,7 +12,10 @@ const GlobalStyle = createGlobalStyle`
      
     }
     .Toastify__toast-container--top-right{
-        top:100px;
+        top:10px;
+        @media(max-width:900px){
+            top:5px;
+        }
     }
 
 `
