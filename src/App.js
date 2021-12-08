@@ -21,7 +21,7 @@ import SHOP_DATA from './assets/data/shopData';
 import Cart from './components/cart';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
 

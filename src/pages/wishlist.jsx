@@ -4,6 +4,7 @@ import WishlistWrap from "../style/wishlist";
 import { clearAll } from "../redux/wishlist";
 import { useSelector, useDispatch } from "react-redux";
 import { AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const WishlistPage = () => {
 
@@ -11,6 +12,9 @@ const WishlistPage = () => {
     const dispatch = useDispatch();
     return (
         <WishlistWrap>
+            <Helmet>
+                <title>Wishlist | Lorem Ecomerce</title>
+            </Helmet>
             <WishlistWrap.ListBox>
                 <WishlistWrap.Title>
                     Your Wishlist:

@@ -11,11 +11,12 @@ import WishlistBtn from "../components/wishlistBtn";
 import { useDispatch } from "react-redux";
 import { addItem } from "../redux/cart";
 import { notify } from '../components/toast';
+import { Helmet } from "react-helmet";
+
 const ProductPage = () => {
     const id = useParams();
     const product = useSelector(state => state.items.items).filter(item => (item.id === parseInt(id.id, 10)))[0];
     const dispatch = useDispatch();
-
     const handleAddToCart = (itemToAdd) => {
         dispatch(addItem(itemToAdd));
         notify("You ADD item to cart");
@@ -24,6 +25,9 @@ const ProductPage = () => {
 
     return (
         <Product>
+            <Helmet>
+                <title>{product.name} | Lorem Ecomerce</title>
+            </Helmet>
             <Product.Container>
                 <Product.ImgBox>
                     <Product.Img src={product.imgUrl} />

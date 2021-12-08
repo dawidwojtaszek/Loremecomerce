@@ -2,11 +2,15 @@ import React from "react";
 import Contact from "../style/contact";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet";
 const ContactPage = () => {
 
     return (
 
         <Contact>
+            <Helmet>
+                <title>Contact | Lorem Ecomerce</title>
+            </Helmet>
             <Contact.Title>DO You have any question?</Contact.Title>
             <Contact.Form>
                 <Contact.Label htmlFor="name" >Your name:</Contact.Label>

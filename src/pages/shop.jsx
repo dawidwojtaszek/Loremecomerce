@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setCurrentShop, filterShopCategory } from "../redux/items";
 import { useEffect } from "react";
 import SHOP_DATA from "../assets/data/shopData";
+import { Helmet } from "react-helmet";
 
 const ShopPage = () => {
 
@@ -20,6 +21,9 @@ const ShopPage = () => {
 
     return (
         <Shop>
+            <Helmet>
+                <title>Shop | Lorem Ecomerce</title>
+            </Helmet>
             <Shop.Container>
                 <Shop.Navigation>
                     <Shop.NavigationBtn onClick={() => dispatch(setCurrentShop(allItems))}>All</Shop.NavigationBtn>

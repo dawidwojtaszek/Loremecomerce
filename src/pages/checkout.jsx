@@ -4,6 +4,7 @@ import CheckoutElement from "../components/checkoutElement";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoneyCheckAlt } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
+import { Helmet } from "react-helmet";
 
 const CheckoutPage = () => {
 
@@ -11,6 +12,9 @@ const CheckoutPage = () => {
     const cartItems = useSelector(state => state.cart.items);
     return (
         <Checkout>
+            <Helmet>
+                <title>Checkout | Lorem Ecomerce</title>
+            </Helmet>
             <Checkout.Box>
                 <Checkout.Title>
                     Your cart:
