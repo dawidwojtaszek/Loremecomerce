@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Form, Input, Title, Button, Label, SubTitle, BtnBox } from "../style/signin/forms";
+import { Box, Form, Input, Title, Button, Label, SubTitle } from "../style/signin/forms";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";

@@ -13,6 +13,7 @@ const BlogPage = () => {
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(response => response.json())
             .then(json => dispatch(setPosts(json.slice(0, 15))));
+        // eslint-disable-next-line
     }, []);
 
     const blogPosts = useSelector(state => state.blog.blogPosts);

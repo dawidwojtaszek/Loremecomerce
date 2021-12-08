@@ -8,7 +8,6 @@ import { addItem } from "../redux/cart";
 import { useRef } from "react";
 import { notify } from "./toast";
 import WishlistBtn from "./wishlistBtn";
-import { AnimatePresence } from "framer-motion";
 
 
 const Modal = () => {
