@@ -17,7 +17,8 @@ const Cart = () => {
         }
     }
     const cartItemsList = useSelector(state => state.cart.items);
-    const cartTotal = useSelector(state => state.cart.items).reduce((acumulator, cartItem) => acumulator + (cartItem.price * cartItem.quantity), 0);
+    let cartTotal = useSelector(state => state.cart.items).reduce((acumulator, cartItem) => acumulator + (cartItem.price * cartItem.quantity), 0);
+    cartTotal = Math.round(cartTotal * 100) / 100;
     const cartQuantity = useSelector(state => state.cart.items).reduce((accumulator, cartItem) => accumulator + cartItem.quantity, 0);
 
 
