@@ -29,14 +29,20 @@ const Bestsellers = ({ bestsellerList }) => {
                     <BestsellersSection.NavLink onClick={() => dispatch(setCurrentBestseller(allBestsellers))}>
                         All
                     </BestsellersSection.NavLink>/
-                    <BestsellersSection.NavLink onClick={() => dispatch(filterCategory('jackets'))}>
-                        Jackets
-                    </BestsellersSection.NavLink>/
                     <BestsellersSection.NavLink onClick={() => dispatch(filterCategory('hat'))}>
                         Hats
                     </BestsellersSection.NavLink>/
+                    <BestsellersSection.NavLink onClick={() => dispatch(filterCategory('jackets'))}>
+                        Jackets
+                    </BestsellersSection.NavLink>/
                     <BestsellersSection.NavLink onClick={() => dispatch(filterCategory('shoes'))}>
                         Shoes
+                    </BestsellersSection.NavLink>/
+                    <BestsellersSection.NavLink onClick={() => dispatch(filterCategory('shirt'))}>
+                        Shirts
+                    </BestsellersSection.NavLink>/
+                    <BestsellersSection.NavLink onClick={() => dispatch(filterCategory('bag'))}>
+                        Bags
                     </BestsellersSection.NavLink>
                 </BestsellersSection.Navigation>
                 <BestsellersSection.ItemsContainer>

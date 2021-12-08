@@ -18,6 +18,9 @@ const Navigation = styled.div`
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
+    @media(max-width:650px){
+        font-size: 0.8rem;
+    }
 `
 const NavLink = styled.button`
     cursor: pointer;
@@ -27,6 +30,9 @@ const NavLink = styled.button`
     font-size: 1.5rem;
     &:hover{
         opacity: 0.8;
+    }
+    @media(max-width:650px){
+        font-size: 0.8rem;
     }
 
 `

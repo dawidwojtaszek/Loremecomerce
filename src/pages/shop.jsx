@@ -25,7 +25,6 @@ const ShopPage = () => {
                     <Shop.NavigationBtn onClick={() => dispatch(setCurrentShop(allItems))}>All</Shop.NavigationBtn>
                     <Shop.NavigationBtn onClick={() => dispatch(filterShopCategory('hat'))}>Hats</Shop.NavigationBtn>
                     <Shop.NavigationBtn onClick={() => dispatch(filterShopCategory('jackets'))}>Jackets</Shop.NavigationBtn>
-                    <Shop.NavigationBtn onClick={() => dispatch(filterShopCategory('jeans'))}>Jeans</Shop.NavigationBtn>
                     <Shop.NavigationBtn onClick={() => dispatch(filterShopCategory('shoes'))}>Shoes</Shop.NavigationBtn>
                     <Shop.NavigationBtn onClick={() => dispatch(filterShopCategory('shirt'))}>Shirts</Shop.NavigationBtn>
                     <Shop.NavigationBtn onClick={() => dispatch(filterShopCategory('bag'))}>Bags</Shop.NavigationBtn>

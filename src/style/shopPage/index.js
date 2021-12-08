@@ -30,6 +30,7 @@ const Navigation = styled.div`
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        margin-top: .5rem;
     }
 `
 const NavigationTitle = styled.span`
@@ -54,6 +55,9 @@ const NavigationBtn = styled.button`
         font-size:1rem;
         padding: 0.5rem;
 
+    }
+    @media(max-width:650px){
+        font-size: .8rem;
     }
 `
 const ProductList = styled.div`
