@@ -1,7 +1,7 @@
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
-
-export const notify = (message) => toast.success(message, {
+export const notify = (message) =>
+  toast.success(message, {
     position: "top-right",
     autoClose: 2000,
     hideProgressBar: false,
@@ -9,4 +9,4 @@ export const notify = (message) => toast.success(message, {
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-});
+  });
